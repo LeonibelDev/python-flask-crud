@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/bootstrap.css')}}">
+
+    {% block static_files %}
+    {% endblock %}
+    
+</head>
+<body>
+
+<!-- <header>
+    <div class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <div class="text-light">
+                <h5>TASKS LIST</h5>
+            </div>
+            <div class="text-light">
+                <p>Python Flask · AJAX · MongoDB</p>
+            </div>
+        </div>
+    </div>
+</header>   -->  
+{% block body %}
+{% endblock %}
+</body>
+</html>

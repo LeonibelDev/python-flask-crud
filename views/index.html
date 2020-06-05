@@ -1,0 +1,84 @@
+{% extends "template.html" %}
+
+{% block title %}
+    Home - to do
+{% endblock %}
+
+
+{% block static_files %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/index.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/fontawesome-free-5.9.0-web/css/all.min.css')}}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/delete.js')}}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='/add.js')}}"></script>
+    <script type="text/javascript">
+    function parseTime(time) {
+        let meses = [
+          'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+          'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+        ]
+
+        let root = null
+
+        root = meses[time.getMonth()] + ' ' + time.getDate()  
+        return root 
+    }
+    </script>
+{% endblock %}
+
+
+{% block body %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div>
+                <div class="card form">
+                    <div class="card-body">
+                        <div>
+                            <input type="text" name="task_title" class="form-control title" placeholder="title">
+                        </div>
+
+                        <div>
+                            <textarea class="form-control desc" name="task_desc" rows="7" placeholder="task description"></textarea>
+                        </div>
+
+                        <button class="button send">
+                        <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="card-columns">
+                
+                {% for task in tasks %}
+            
+                <div class="card" title="{{task.timestamp}}">
+                    <div class="card-header">
+                    <h5 class="">
+                        {{ task.title }}
+                    </h5>
+
+                    </div>
+                    <div class="card-body">
+                        <p>{{ task.description }}</p>
+                    </div>
+                    <div class="card-footer">
+                        
+                        <data sm-data="/delete/{{task._id}}" class="" id="delete"><i class="fas fa-trash"></i></data>
+                        
+                    </div>
+                </div>
+
+                {% endfor %}
+                
+            </div>    
+        </div>
+    </div>
+</div>
+
+{% endblock %}

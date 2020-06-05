@@ -1,0 +1,86 @@
+.card *, .card, .card *:focus, .card:focus{
+    box-shadow: none;
+}
+
+.card input, .card textarea, .card input:focus, .card textarea:focus{
+    border:0;
+    box-shadow: rgba(0,0,0,.2) 0 1px 6px;
+
+}
+
+.button{
+    padding: 8px;
+    margin-top: 10px;
+    border:0;
+    width: 100%;
+    background: #4BB7FC;
+    color: #fff;
+    font-size: 70%;
+}
+
+
+body{
+    background: #f1f1f1;
+}
+
+.card-columns .card *{
+    border:0;
+    background: transparent;
+    
+}
+
+.card-columns .card{
+    box-shadow: rgba(0,0,0,.2) 0 1px 6px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.card-columns #delete{
+    padding:  0;
+    padding: 8px 13px;
+    background: #dc3545;
+    border-radius: 100% 100%; 
+    color:#fff;
+    float: right;
+    margin: 10px;
+    font-size: 90%;
+}
+
+.card-columns .card-body{
+    padding-top: 4px;
+}
+
+.form, .form *{
+    border-radius: 5px;
+}
+
+.form{
+    box-shadow: rgba(0,0,0,.2) 0 1px 4px;
+    border: 1px solid rgba(0,0,0,.1);
+    position: fixed;
+    width: 25%;
+}
+
+.form textarea{
+    margin-top: 8%;
+}
+
+.form textarea::placeholder, .form input::placeholder{
+    color: rgba(0,0,0,.4);
+    font-family: Arial;
+    font-size: 90%;
+    margin-left: 20px;
+}
+
+.button{
+    width: auto;
+    padding:  0;
+    padding: 15px 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 100% 100%; 
+    float: left;
+    margin: 10px;
+    font-size: 90%;
+
+}
