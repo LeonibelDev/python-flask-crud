@@ -5,9 +5,11 @@
 very minimalist and easy to use to-do list. It has a simple form,
 in the same way it works through ajax so that you do not have 
 reloading the page dozens of times 
-
+## Install dependencies
+> $ pip3 install -r requirements.txt
 ## main file
 > app.py
+
 
 ## usage
 1. python3 app.py
